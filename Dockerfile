@@ -3,6 +3,10 @@ FROM pytorch/pytorch:latest
 # This is so we can do print() from Python without having to flush stdout afterward.
 ENV PYTHONUNBUFFERED 1
 
+RUN apt-get update && \
+    apt-get upgrade -y && \
+    apt-get install -y git
+
 # Removed  --cuda_ext
 RUN git clone https://github.com/NVIDIA/apex.git && cd apex && python setup.py install --cpp_ext
 
