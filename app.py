@@ -2,8 +2,13 @@
 from flask import Flask, request, jsonify
 import random
 import excuseggen
+from excuses import ExcuseSituation
+from textgen import TextGenerator
 
 app = Flask(__name__)
+
+model_size = 'gpt2'
+gen = TextGenerator(model_size)
 
 @app.route('/getx/', methods=['GET'])
 def respond():
@@ -45,6 +50,22 @@ def post_something():
             "ERROR": "no name found, please send a name."
         })
 
+@app.route('/excuse/gen')
+def excuse():
+    def show_word(w):
+        print('>', w)
+
+    s = ExcuseSituation(gen, assignment="prepare a nice dinner for you for Valentine's day", tasks=[
+        'plan the menu',
+        'go to the grocery store to buy the ingredients',
+        'cook it up',
+        'plate the meal in an attractive way',
+    ], word_callback=show_word)
+    excuses = s.generate_excuses(count=3)
+    result =  {
+        'excuses' : excuses
+    }
+    return result
 # A welcome message to test our server
 @app.route('/')
 def index():
