@@ -8,7 +8,7 @@ RUN apt-get update && \
     apt-get install -y git
 
 # Removed  --cuda_ext
-RUN git clone https://github.com/NVIDIA/apex.git && cd apex && python setup.py install --cpp_ext
+RUN git clone https://github.com/NVIDIA/apex.git && git checkout 700d6825e205732c1d6be511306ca4e595297070 && cd apex && python setup.py install --cpp_ext
 
 RUN pip install transformers
 
