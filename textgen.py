@@ -4,7 +4,7 @@ import torch.nn.functional as F
 from transformers import GPT2Tokenizer, GPT2LMHeadModel
 
 class TextGenerator:
-    def __init__(self, model_name='gpt2', temperature = 0.8, use_gpu=False):
+    def __init__(self, model_name='distilgpt2', temperature = 0.9, use_gpu=False):
         """
         Model names come from the keys in GPT2_PRETRAINED_CONFIG_ARCHIVE_MAP.
             "gpt2"

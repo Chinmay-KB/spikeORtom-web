@@ -49,15 +49,15 @@ def post_something():
 def excuse():
     def show_word(w):
         print('>', w)
-    model_size = 'gpt2'
+    model_size = 'distilgpt2'
     gen = TextGenerator(model_size)
-    s = ExcuseSituation(gen, assignment="prepare a nice dinner for you for Valentine's day", tasks=[
-        'plan the menu',
-        'go to the grocery store to buy the ingredients',
-        'cook it up',
-        'plate the meal in an attractive way',
+    s = ExcuseSituation(gen, assignment=random.choice(excuseggen.perpetrator) +" "+random.choice(excuseggen.delay), tasks=[
+        # 'plan the menu',
+        # 'go to the grocery store to buy the ingredients',
+        # 'cook it up',
+        # 'plate the meal in an attractive way',
     ], word_callback=show_word)
-    excuses = s.generate_excuses(count=3)
+    excuses = s.generate_excuses(count=1)
     result =  {
         'excuses' : excuses
     }
