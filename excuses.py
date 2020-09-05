@@ -1,4 +1,5 @@
 import random
+import excuseggen
 
 BlameModeMe = {
     '[my]': 'my',
@@ -128,7 +129,7 @@ class ExcuseSituation:
         return self.excuse
         
     def generate_excuse_task(self):
-        self._out_choice(INTRO_TEXT)
+        self._out_choice(random.choice(excuseggen.leadIn))
         self._out_add(self.assignment + '.')
         self._out_choice(TASK_INTRO)
         self._out_choice(self.tasks, end_sentence=True)
@@ -137,7 +138,7 @@ class ExcuseSituation:
         return self.excuse
         
     def generate_excuse_whole(self):
-        self._out_choice(INTRO_TEXT)
+        self._out_choice(random.choice(excuseggen.leadIn))
         self._out_add(self.assignment + '.')
         self._out_choice(HOWEVER_TEXT)
         self.generator.generate_sentence(self.excuse, on_word_generated=self._out_add)

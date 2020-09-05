@@ -30,7 +30,7 @@ leadIn = [
 perpetrator = [
 "your mom",
 "Princess Peach",
-"Godzilla",
+"Harambe",
 "the offensive line of the '76 Dallas Cowboys",
 "a handicapped gentleman",
 "a triceratops named Penelope",
@@ -48,11 +48,9 @@ perpetrator = [
 "the entire Roman Empire",
 "Kevin Ware's leg bone",
 "a British chap",
-"a Hasidic Jew",
-"Kevin Spacey",
-"Kevin Costner's stunt double",
-"Kevin McCallister's real life fake tarantuala",
-"the Cthulhu"
+"a Holocause survivor",
+"Donald Trump",
+
 ]
 
 delay = [
