@@ -14,7 +14,7 @@ RUN git remote -v
 RUN git fetch origin 700d6825e205732c1d6be511306ca4e595297070
 
 RUN git checkout FETCH_HEAD
-RUN pip install -v --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" ./
+RUN pip install -v --no-cache-dir --global-option="--cpp_ext" ./
 #RUN python setup.py install --cpp_ext
 
 RUN pip install transformers
