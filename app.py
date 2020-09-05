@@ -27,7 +27,7 @@ def respond():
     # Now the user entered a valid name
     else:
         excuse= excuseggen.makeExcuse()
-        response["MESSAGE"] = f"{excuse}"
+        response["MESSAGE"] = "{excuse}"
 
     # Return the response in json format
     return jsonify(response)
@@ -39,7 +39,7 @@ def post_something():
     # You can add the test cases you made in the previous function, but in our case here you are just testing the POST functionality
     if param:
         return jsonify({
-            "Message": f"Welcome {name} to our awesome platform!!",
+            "Message": "Welcome {name} to our awesome platform!!",
             # Add this option to distinct the POST request
             "METHOD" : "POST"
         })
