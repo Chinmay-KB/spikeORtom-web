@@ -10,17 +10,17 @@ RUN apt-get update && \
 # Removed  --cuda_ext
 RUN git clone https://github.com/NVIDIA/apex.git && cd apex && python setup.py install --cpp_ext
 
-#RUN pip install transformers
+RUN pip install transformers
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-#RUN mkdir /app
+RUN mkdir /app
 WORKDIR /app
-#COPY requirements.txt /app
-#RUN pip install --no-cache-dir -r requirements.txt
+COPY requirements.txt /app
+RUN pip install --no-cache-dir -r requirements.txt
 
-#COPY . /app
+COPY . /app
 
 # Expose the flask port
 EXPOSE 5000
