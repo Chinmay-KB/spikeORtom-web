@@ -49,7 +49,7 @@ def post_something():
 def excuse():
     def show_word(w):
         print('>', w)
-    model_size = 'gpt2-xl'
+    model_size = 'gpt2'
     gen = TextGenerator(model_size)
     s = ExcuseSituation(gen, assignment=random.choice(excuseggen.perpetrator) +" "+random.choice(excuseggen.delay), tasks=[
         # 'plan the menu',
