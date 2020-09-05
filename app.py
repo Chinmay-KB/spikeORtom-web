@@ -16,8 +16,6 @@ def respond():
     name = request.args.get("name", None)
 
     # For debugging
-    print(f"got name {name}")
-
     response = {}
 
     # Check if user sent a name at all
