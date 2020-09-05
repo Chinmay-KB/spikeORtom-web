@@ -9,7 +9,7 @@ RUN apt-get update && \
 
 # Removed  --cuda_ext
 RUN git clone https://github.com/NVIDIA/apex.git
-RUN cd apex
+WORKDIR apex
 RUN git remote -v
 RUN git fetch origin 700d6825e205732c1d6be511306ca4e595297070
 
