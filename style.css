@@ -1,0 +1,60 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Grandstander', cursive;
+    
+}
+
+
+body{
+    background-color: #0cbaba;
+    
+    overflow: hidden;
+    
+}
+
+.header-section{
+    width:100%;
+    
+}
+
+.font-weight-bold{
+    font-family: 'Grandstander', cursive;
+    font-size:100px ;
+    font-size-adjust: 0.58;
+    padding-top: 6%;
+}
+
+  .btn{
+    background-color:#fca82f;
+     border: none;
+    border-radius: 50px;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2), 0 8px 20px 0 rgba(0,0,0,0.19);
+    font-weight: 400;
+  }
+
+.btn:hover{
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 50px;
+    color: black;
+   
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    font-weight: 400;
+
+}
+
+
+  img{
+    margin-left: 355px;
+  }
