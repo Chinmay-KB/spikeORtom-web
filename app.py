@@ -2,8 +2,8 @@
 from flask import Flask, request, jsonify
 import random
 import excuseggen
-from excuses import ExcuseSituation
-from textgen import TextGenerator
+# from excuses import ExcuseSituation
+# from textgen import TextGenerator
 
 app = Flask(__name__)
 
@@ -45,24 +45,24 @@ def post_something():
             "ERROR": "no name found, please send a name."
         })
 
-@app.route('/excuse/gen')
-def excuse():
-    def show_word(w):
-        print('>', w)
-    model_size = 'gpt2'
-    gen = TextGenerator(model_size)
-    s = ExcuseSituation(gen, assignment=random.choice(excuseggen.perpetrator) +" "+random.choice(excuseggen.delay), tasks=[
-        # 'plan the menu',
-        # 'go to the grocery store to buy the ingredients',
-        # 'cook it up',
-        # 'plate the meal in an attractive way',
-    ], word_callback=show_word)
-    excuses = s.generate_excuses(count=1)
-    result =  {
-        'excuses' : excuses
-    }
-    return result
-# A welcome message to test our server
+# @app.route('/excuse/gen')
+# def excuse():
+#     def show_word(w):
+#         print('>', w)
+#     model_size = 'gpt2'
+#     gen = TextGenerator(model_size)
+#     s = ExcuseSituation(gen, assignment=random.choice(excuseggen.perpetrator) +" "+random.choice(excuseggen.delay), tasks=[
+#         # 'plan the menu',
+#         # 'go to the grocery store to buy the ingredients',
+#         # 'cook it up',
+#         # 'plate the meal in an attractive way',
+#     ], word_callback=show_word)
+#     excuses = s.generate_excuses(count=1)
+#     result =  {
+#         'excuses' : excuses
+#     }
+#     return result
+# # A welcome message to test our server
 @app.route('/')
 def index():
     return "<h1>Welcome to our server !!</h1>"
